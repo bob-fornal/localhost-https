@@ -6,10 +6,11 @@ rm -rf *
 cd ..
 
 openssl genrsa \
-  -out certificates/rootCA.key \
-  -des3 2048
+  -passout pass:PASSWORD \
+  -out certificates/rootCA.key \-des3 2048
 
 openssl req \
+  -passin pass:PASSWORD \
   -key certificates/rootCA.key \
   -out certificates/rootCA.pem \
   -config ./openssl-custom.cnf \
@@ -29,6 +30,7 @@ openssl req \
   -newkey rsa:2048
 
 openssl x509 \
+  -passin pass:PASSWORD \
   -CA certificates/rootCA.pem \
   -CAkey certificates/rootCA.key \
   -in certificates/server.csr \
