@@ -4,6 +4,12 @@
 
 All the detailed instructions I had found were correct for the time they were written. Not anymore.
 
+### Option (Manual)
+
+```javascript
+sendCommand(SecurityInterstitialCommandId.CMD_PROCEED)
+```
+
 ## Installation
 
 ### 1. Configuration

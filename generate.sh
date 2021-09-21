@@ -25,7 +25,7 @@ openssl req \
   -nodes \
   -new \
   -sha256 \
-  -days 7300
+  -days 730
 
 echo ""
 echo "====> GENERATING server.key and server.csr"

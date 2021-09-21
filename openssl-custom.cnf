@@ -16,8 +16,8 @@ CN = localhost
 
 [v3_req]
 authorityKeyIdentifier=keyid,issuer
-basicConstraints=CA:FALSE
-keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+extendedKeyUsage=serverAuth,clientAuth
+keyUsage = critical, digitalSignature, keyAgreement, nonRepudiation, keyEncipherment, dataEncipherment
 subjectAltName = @alt_names
 
 [alt_names]
