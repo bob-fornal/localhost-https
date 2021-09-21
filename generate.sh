@@ -7,7 +7,7 @@ cd ..
 
 openssl genrsa \
   -out certificates/rootCA.key \
-  -des3  2048
+  -des3 2048
 
 openssl req \
   -key certificates/rootCA.key \
@@ -17,7 +17,7 @@ openssl req \
   -nodes \
   -new \
   -sha256 \
-  -days 1024
+  -days 7300
 
 openssl req \
   -keyout certificates/server.key \
@@ -35,6 +35,6 @@ openssl x509 \
   -out certificates/server.crt \
   -req \
   -CAcreateserial \
-  -days 500 \
+  -days 825 \
   -sha256 \
   -extfile ./v3.ext
